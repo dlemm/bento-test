@@ -1,0 +1,224 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  overflow-x: hidden;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.stage {
+  background-image: url("./images/stage.jpeg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center top;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  color: #E8EAE7;
+  font-size: 4rem;
+}
+
+h1.stage__headline {
+  position: absolute;
+  top: 50vh;
+  left: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 1.55rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.module {
+  position: relative;
+  padding: 0 4rem;
+  margin: 0 auto 4rem auto;
+  width: 66vw;
+}
+
+#my-accordion > section > h3 {
+  background-color: #776561;
+  color: #E8EAE7;
+  border-bottom: 1px solid #E8EAE7;
+  padding: 1rem;
+}
+#my-accordion > section[expanded] > h3 {
+  box-shadow: 0px 5px 10px 4px rgba(0,0,0,0.10);
+}
+
+#my-accordion > section > p {
+  display: none;
+}
+
+#my-accordion > section[expanded] > p {
+  display: block;
+  padding: 1rem;
+}
+
+
+#my-carousel{
+  box-shadow: 5px 5px 10px 4px rgba(0,0,0,0.10);
+}
+
+bento-base-carousel, bento-base-carousel > div {
+  aspect-ratio: 4/3;
+}
+
+.carousel__item--1 {
+  background: url("./images/gallery_01.jpg");
+}
+.carousel__item--2 {
+  background: url("./images/gallery_02.jpg");
+}
+.carousel__item--3 {
+  background: url("./images/gallery_03.jpg");
+}
+.carousel__item--4 {
+  background: url("./images/gallery_04.jpg");
+}
+.carousel__item--5 {
+  background: url("./images/gallery_05.jpg");
+}
+.carousel__item--6 {
+  background: url("./images/gallery_06.jpg");
+}
+.carousel__item--7 {
+  background: url("./images/gallery_07.jpg");
+}
+
+.carousel__item--1,
+.carousel__item--2,
+.carousel__item--3,
+.carousel__item--4,
+.carousel__item--5,
+.carousel__item--6,
+.carousel__item--7 {
+  background-size: cover;
+}
+
+
+bento-base-carousel {
+  aspect-ratio: 9/5;
+  box-shadow: 5px 5px 10px 4px rgba(0,0,0,0.10);
+}
+
+bento-facebook {
+  height: 300px;
+  width: 100%;
+}
+
+bento-stream-gallery {
+  aspect-ratio: 4/3;
+}
+
+bento-embedly-card {
+  aspect-ratio: 3/2;
+}
+
+bento-fit-text {
+  height: 100px;
+  width: 100%;
+}
+
+bento-social-share {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 375px;
+  height: 472px;
+}
+
+bento-social-share {
+  height: 100px;
+  width: 100px;
+}
+
+bento-soundcloud {
+  aspect-ratio: 10/1;
+}
+
+bento-twitter {
+  aspect-ratio: 9/16;
+}
+
+aside {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
+
+bento-sidebar {
+  display: none;
+}
+
+bento-sidebar.open {
+  display: block;
+  background: #fff;
+  padding: 1rem;
+}
+
+bento-sidebar.open li {
+  margin-bottom: 10px;
+}
+
+bento-sidebar.open a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+}
+
+bento-sidebar.open a:hover {
+  text-decoration: underline;
+}

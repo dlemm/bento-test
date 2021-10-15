@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bento Test</title>
+  <script src="https://cdn.ampproject.org/custom-elements-polyfill.js"></script>
+  <script async src="https://cdn.ampproject.org/v0/bento-accordion-1.0.js"></script>
+  <script async src="https://cdn.ampproject.org/v0/bento-base-carousel-1.0.js"></script>
+  <script async src="https://cdn.ampproject.org/v0/bento-date-countdown-1.0.js"></script>
+  <script async src="https://cdn.ampproject.org/v0/bento-date-display-1.0.js"></script>
+  <script async src="https://cdn.ampproject.org/v0/bento-embedly-card-1.0.js"></script>
+  <script async src="https://cdn.ampproject.org/v0/bento-facebook-1.0.js"></script>
+  <script async src="https://cdn.ampproject.org/v0/bento-inline-gallery-1.0.js"></script>
+  <script async custom-element="bento-fit-text" src="https://cdn.ampproject.org/v0/bento-fit-text-1.0.js"></script>
+  <script async src="https://cdn.ampproject.org/v0/bento-mathml-1.0.js"></script>
+  <script async src="https://cdn.ampproject.org/v0/bento-sidebar-1.0.js"></script>
+  <script async src="https://cdn.ampproject.org/v0/bento-twitter-1.0.js"></script>
+  <script async src="https://cdn.ampproject.org/v0/amp-twitter-1.0.js"></script>
+  <script async src="https://cdn.ampproject.org/v0/bento-soundcloud-1.0.js"></script>
+  <script async src="https://cdn.ampproject.org/v0/bento-stream-gallery-1.0.js"></script>
+
+
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.ampproject.org/v0/amp-accordion-1.0.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.ampproject.org/v0/bento-date-countdown-1.0.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.ampproject.org/v0/amp-inline-gallery-1.0.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.ampproject.org/v0/bento-date-display-1.0.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.ampproject.org/v0/amp-streamGallery-1.0.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.ampproject.org/v0/bento-mathml-1.0.css">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <!-- These styles prevent Cumulative Layout Shift on the unupgraded custom element -->
+  <style data-bento-boilerplate>
+    bento-base-carousel,
+    bento-mathml,
+    bento-date-countdown,
+    bento-embedly-card,
+    bento-facebook,
+    bento-fit-text,
+    bento-stream-gallery,
+    bento-twitter,
+    bento-social-share,
+    bento-soundcloud {
+      display: block;
+      overflow: hidden;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="stage">
+    <h1 class="stage__headline">Portfolio Page</h1>
+  </section>
+  <main>
+    <!--  The bento accordion -->
+    <aside>
+      <bento-sidebar id="sidebar" side="right">
+        <ul>
+          <li><a href="#module-1">Bento Accordion</a></li>
+          <li><a href="#module-2">Bento base carousel</a></li>
+          <li><a href="#module-3">Bento count down</a></li>
+          <li><a href="#module-4">Bento date display</a></li>
+          <li><a href="#module-5">Bento embedly card</a></li>
+          <li><a href="#module-6">Bento facebook</a></li>
+          <li><a href="#module-7">Bento fit text</a></li>
+          <li><a href="#module-8">Bento inline gallery</a></li>
+          <li><a href="#module-9">Bento Mathml</a></li>
+          <li><a href="#module-11">Bento Soundcloud</a></li>
+          <li><a href="#module-12">Bento Stream Gallery</a></li>
+        </ul>
+      </bento-sidebar>
+      <div class="buttons" style="margin-top: 8px;">
+        <button id="open-sidebar">
+          Navigation
+        </button>
+      </div>
+    </aside>
+    <!--  The bento accordion -->
+    <section class="module" id="module-1">
+      <h2>My photography skillz</h2>
+      <bento-accordion id="my-accordion" expand-single-section>
+        <section id="section1">
+          <h3>Pictures</h3>
+          <p>This is a test paragraph</p>
+        </section>
+        <section>
+          <h3>Movies</h3>
+          <p>This is a test paragraph</p>
+        </section>
+        <section>
+          <h3>Portraits</h3>
+          <p>This is a test paragraph</p>
+        </section>
+      </bento-accordion>
+    </section>
+
+    <!--  The bento carousel  -->
+    <section class="module" id="module-2">
+      <h2>My example images</h2>
+      <bento-base-carousel id="my-carousel" loop>
+        <div class="carousel__item--1"></div>
+        <div class="carousel__item--2"></div>
+        <div class="carousel__item--3"></div>
+        <div class="carousel__item--4"></div>
+        <div class="carousel__item--5"></div>
+        <div class="carousel__item--6"></div>
+        <div class="carousel__item--7"></div>
+      </bento-base-carousel>
+    </section>
+
+    <!--  The bento count down  -->
+    <section class="module" id="module-3">
+      <h2>Time till x-mas special</h2>
+      <bento-date-countdown timeleft-ms="200000000" biggest-unit="HOURS" template="date-template">
+        <template type="amp-mustache" id="date-template">
+          <div>
+            <span>{{days}} {{dd}} {{d}}</span>
+            <br />
+            <span>{{hours}} {{hh}} {{h}}</span>
+            <br />
+            <span>{{minutes}} {{mm}} {{m}}</span>
+            <br />
+            <span>{{seconds}} {{ss}} {{s}}</span>
+          </div>
+        </template>
+      </bento-date-countdown>
+    </section>
+
+    <!-- bemto diplay date -->
+    <section class="module" id="module-4">
+      <h2>Today is</h2>
+      <bento-date-display datetime="2021-09-09T16:02:08.494Z" displayIn="utc" locale="en-GB">
+        <template type="amp-mustache">
+          <div>ISO: {{iso}}; locale: {{localeString}}</div>
+        </template>
+      </bento-date-display>
+    </section>
+
+    <!-- bento embedly card -->
+    <section class="module" id="module-5">
+      <h2>Find me on social media</h2>
+      <bento-embedly-key value="12af2e3543ee432ca35ac30a4b4f656a">
+      </bento-embedly-key>
+
+      <h3>My newest Tutorial</h3>
+      <bento-embedly-card data-url="https://www.youtube.com/watch?v=xgEtjktPjSU" data-card-theme="dark" id="my-url">
+      </bento-embedly-card>
+      <h3>My latest Tweet</h3>
+      <bento-embedly-card data-url="https://twitter.com/3141rate/status/1447193138758553603" data-card-theme="dark">
+      </bento-embedly-card>
+
+      <span>latest tweet with picture (and embedded with bento-twitter): </span>
+      <bento-twitter id="my-tweet" data-tweetid="1447194043952386049">
+      </bento-twitter>
+    </section>
+
+    <!-- Bento facebook posts -->
+    <section class="module" id="module-6">
+      <h2>I am even on facebook, you know?</h2>
+      <bento-facebook id="facebook-post" data-href="https://www.facebook.com/ParksCanada/posts/1712989015384373">
+      </bento-facebook>
+    </section>
+
+    <!-- Bento fit text -->
+    <section class="module" id="module-7">
+      <h3>Please read the fine print, too</h3>
+      <p>Too fine? Well, enlarge the font-size via button.</p>
+      <div style="width: 300px; height: 100px;">
+        <bento-fit-text id="my-fit-text" max-font-size="4">
+          Lorem ipsum dolor sit amet, has nisl nihil convenire et, vim at aeque
+          inermis reprehendunt.
+        </bento-fit-text>
+      </div>
+      <div class="buttons" style="margin-top: 8px;">
+        <button id="font-button">Change max-font-size</button>
+        <button id="content-button">Change content</button>
+      </div>
+    </section>
+
+    <!-- Bento inline gallery -->
+    <section class="module" id="module-8">
+      <h2>More pictures to discover</h2>
+      <bento-inline-gallery id="inline-gallery">
+        <bento-inline-gallery-thumbnails aspect-ratio="4/3" loop>
+        </bento-inline-gallery-thumbnails>
+        <bento-base-carousel snap-align="center" visible-count="1.2" loop>
+          <img alt="image alt text" src="./images/gallery_01.jpg">
+          <img alt="image alt text" src="./images/gallery_02.jpg">
+          <img alt="image alt text" src="./images/gallery_03.jpg">
+        </bento-base-carousel>
+      </bento-inline-gallery>
+      <bento-social-share id="my-share" type="twitter" aria-label="Share via twitter"
+        data-param-url="https://www.twitter.com"></bento-social-share>
+    </section>
+
+    <!-- Bento mathml -->
+    <section class="module" id="module-9">
+      <h2>How my price is calculated</h2>
+      <bento-mathml style="height: 40px" data-formula="\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]"></bento-mathml>
+    </section>
+
+    <!-- Bento soundcloud -->
+    <section class="module" id="module-10">
+      <h2>My photoshooting to go track</h2>
+      <bento-soundcloud id="my-track" data-trackid="11032803" data-visual="false"></bento-soundcloud>
+    </section>
+
+    <!-- Bento stream gallery -->
+    <section class="module" id="module-12">
+      <h2>Still not enough pictures? I feel you</h2>
+      <bento-stream-gallery id="my-stream-gallery" loop max-visible-count="3">
+        <img alt="image alt text" src="./images/gallery_01.jpg">
+        <img alt="image alt text" src="./images/gallery_02.jpg">
+        <img alt="image alt text" src="./images/gallery_03.jpg">
+        <img alt="image alt text" src="./images/gallery_04.jpg">
+        <img alt="image alt text" src="./images/gallery_05.jpg">
+        <img alt="image alt text" src="./images/gallery_06.jpg">
+        <img alt="image alt text" src="./images/gallery_07.jpg">
+      </bento-stream-gallery>
+    </section>
+  </main>
+  <footer>
+    <p>All pictures were found on <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">unsplash.com</a></p>
+  </footer>
+  <script async src="bento-scripts.js"></script>
+</body>
+
+</html>
